@@ -1,13 +1,15 @@
 import React from 'react';
 
-export default () => {
+
+function NavBar(props){
+    const { links } = props;  
     return (
         <nav className='nav'>
-            <p>Home</p>
-            <p>Menu</p>
-            <p>Location</p>
-            <p>Reservation</p>
+          {links.map(link => {
+              return <p key={link} onClick ={() => props.ToPages(link)}>{link}</p>
+          })}
         </nav>
-    );
-
+    )
 }
+export default NavBar;
+ 
