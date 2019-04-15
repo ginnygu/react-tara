@@ -1,11 +1,44 @@
+body{
+  background-color: black;
+}
 .App {
   text-align: center;
 }
-.nav p{
+.tiny-logo{
+  height: 100%;
+  margin-left: 3em;
+}
+.nav{
+  background: rgb(0, 0, 0);
+  padding-top: 1em;
+  height: 2.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar{
+  display: flex;
+  justify-content: space-around;
+  width: 100vh;
+  align-items: center;
+}
+.nav-bar p{
   display: inline;
-  padding: calc(100vw - 90%)
+  font-size:1.1em;
+  color: white;
+  font-family: 'Bilbo Swash Caps', cursive;
+}
+.nav-bar p:hover{
+  cursor: pointer;
 }
 .logo{
   height: 50vh;
 }
-
+.map iframe{
+  height: 70vh;
+  width: 90vw;
+}
+.food-pic{
+  width: 70vw;
+}
