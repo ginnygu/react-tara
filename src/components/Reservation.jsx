@@ -1,11 +1,11 @@
 import React from 'react';
- 
 
-function Slide(){
+function Reservation(){
     return (
         <div>
 
         </div>
     )
 }
-export default Slide;
+
+export default Reservation;

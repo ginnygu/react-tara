@@ -42,3 +42,8 @@ body{
 .food-pic{
   width: 70vw;
 }
+
+#Home, #Menu, #Location, #Reservation {
+  height: 100vh;
+  width: 100vw;
+}

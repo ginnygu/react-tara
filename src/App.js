@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Menu from './components/Menu';
 import Header from './components/Header';
 import Location from './components/Location';
+import Reservation from './components/Reservation';
 import image from './image';
 
 class App extends Component {
@@ -29,7 +30,7 @@ class App extends Component {
   }
   
   ToPages = (page)=> {
-    this.setState({ currentView : page });
+    document.getElementById(`${page}`).scrollIntoView({ behavior: "smooth" });
   }
 
   
@@ -45,44 +46,38 @@ class App extends Component {
     switch (currentView) {
       default:
         return (
-          < Intro
+          <section>
+            < Intro
             currentView={this.state.currentView}
             ToHome={this.ToHome} 
             />
+            </section>
         )
       case 'Home':
         return (
           <div>
-          < Header 
-          currentView={this.state.currentView}
-          links = {links}
-          ToPages = {this.ToPages}
-          />
-          < Home images ={this.state.images}/>
-          </div>
-        )
-      case 'Menu':
-        return (
-          <div>
-          < Header 
-          currentView={this.state.currentView}
-          links = {links}
-          ToPages = {this.ToPages}
-          />
-          < Menu />
-          </div>
-        )
-        case 'Location':
-        return (
-          <div>
-          < Header 
-          currentView={this.state.currentView}
-          links = {links}
-          ToPages = {this.ToPages}
-          />
-          < Location 
-          mapView = {this.state.mapView}
-          />
+            
+            < Header 
+              currentView={this.state.currentView}
+              links = {links}
+              ToPages = {this.ToPages}
+            />
+            <div id="Home">
+            < Home 
+              images ={this.state.images}
+              />
+            </div>
+            <div id="Menu">
+            < Menu />
+            </div>
+            <div id= "Location">
+            < Location 
+              mapView = {this.state.mapView}
+            />
+            </div>
+            <div id="Reservation">
+              < Reservation/>
+            </div>
           </div>
         )
     }
