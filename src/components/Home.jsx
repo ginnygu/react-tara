@@ -1,8 +1,9 @@
 import React from 'react';
+import Slide from './Slide'
 function Home(props){
     return (
         <div>
-            <img className= "food-pic" src={props.images.akami} alt="sorry"/>
+        < Slide/>
         </div>
     )
 
