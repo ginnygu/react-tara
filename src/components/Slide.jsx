@@ -4,31 +4,26 @@ import Slider from "react-slick";
 class Slide extends React.Component {
   render() {
     var settings = {
-      dots: true,
       infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
+      autoplay: true,
+      fade: true,
+      speed: 2000,
+      autoplaySpeed: 2000,
+      slidesToShow: 1
     };
     return (
       <Slider {...settings}>
         <div>
-          <h3>1</h3>
+          <img src="https://s3.amazonaws.com/tara-images/akami.jpg"/>
         </div>
         <div>
-          <h3>2</h3>
+          <img src="https://s3.amazonaws.com/tara-images/botonebi.JPG" alt=""/>
         </div>
         <div>
-          <h3>3</h3>
+          <img src="https://s3.amazonaws.com/tara-images/hotate.JPG" alt=""/>
         </div>
         <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
+          <img src="https://s3.amazonaws.com/tara-images/kamasu.JPG" alt=""/>
         </div>
       </Slider>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import Slide from './Slide'
 function Home(props){
     return (
-        <div>
+        <div className="slideshow">
         < Slide/>
         </div>
     )
