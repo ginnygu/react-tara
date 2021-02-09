@@ -16,7 +16,6 @@ class App extends Component {
       mapView: '',
       images: image
     }
-    this.ToPages = this.ToPages.bind(this);
   }
 
  componentWillMount(){
